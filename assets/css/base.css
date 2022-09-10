@@ -38,7 +38,7 @@ html{
     color: var(--title-color);
 }
 
-.modal
+.modal,.modal-contact
 {
     position: fixed;
     top: 0;

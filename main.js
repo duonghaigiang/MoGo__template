@@ -142,3 +142,48 @@ function tranferImg1()
 
     },400)
 }
+const modalContact = `  <div class="modal-contact">
+    <div class="content__contact">
+<div class="content__wrap">
+    <h2 class="content__heading">
+        Contact
+    </h2>
+    <div class="content__infor">
+        Our Product instruments was all purchased from owner or Third-Party. Video will be removed or negotiable if requested by the copyright owner incase Third-party have identity fraud. ● For any copyright issues please email us at gc0918.vn@gmail.com oduct instruments was all purchased from owner or Third-Party. Video will be removed or negotiable if requested by the copyright owner incase Third-party have identity fraud. ● For any copyright issues please email us at gc0918.vn@gmail.comoduct instruments was all purchased from owner or Third-Party. Video will be removed or negotiable if requested by the copyright owner incase Third-party have identity fraud. ● For any copyright issues please email us at gc0918.vn@gmail.com
+    </div>
+    <div class="content__numberPhone">
+        <a href="tel:09123456999">Number Phone : 09123456999</a>
+    </div>
+    <div class="content__asocia">
+        <div class="content__faceebook">
+            Contact With <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="content__zalo">
+            Contact With <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+        <img src="https://images.unsplash.com/photo-1661439387103-382ec41ff1aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80" alt="">
+
+    </div>
+</div>`
+const getContact = document.querySelectorAll(".header__nav-item a")
+const arrayContact = [...getContact]
+arrayContact.forEach(function(item)
+{
+    item.addEventListener("click",function(event)
+    {
+       if(item.getAttribute("data-tab") === event.target.dataset.tab)
+       {
+          document.body.insertAdjacentHTML("beforeend",modalContact)
+       }
+       document.body.addEventListener("click",function(event)
+       {
+        if(event.target.matches(".modal-contact"))
+        {
+            event.target.parentNode.removeChild(event.target)
+        }
+       })
+
+    })
+})
