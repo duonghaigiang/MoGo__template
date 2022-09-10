@@ -1,0 +1,2 @@
+# MoGo__template
+MoGo
