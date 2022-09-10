@@ -1,0 +1,97 @@
+body
+{ 
+font-family: 'Poppins', sans-serif;
+font-size:1.6rem;
+font-weight:300;
+}
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --title-color:#333333;
+    --text-color:#999999;
+    --primary-color:#e98283;
+    --sencond-color:#eed789;
+    --thirt-color:#95e1d3;
+    --background-color:#f8f8f8;
+    --boder-color:#e5e5e5;
+    --hight-header:118px;
+    --hight-navbar:24px;
+    --hight-search: calc(var(--hight-header)-var(--hight-navbar));
+    --primaryFont:"Montserrat" , san-serif;
+    --sencondFont:"Roboto",san-serif;
+    --thirtFont:"Kaushan Script",cursive;
+    --container:1920px;
+    --wide:1200px;
+    --margin-top-96px:96px;
+    /* [KaushanScript] [Roboto] */
+}
+
+*
+{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem ;
+    font-family: var(--primaryFont);
+    line-height: 1;
+    color: var(--title-color);
+}
+
+.modal
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    animation: fadeIN ease-in 0.2s;
+}
+.modal__overlay
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.modal__body
+{
+    background-color: var(--white-color);
+    position: relative;
+    margin: auto;
+    z-index: 2;
+
+}
+.modal
+{
+    display: none;
+}
+.btn
+{
+    min-width: 130px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
