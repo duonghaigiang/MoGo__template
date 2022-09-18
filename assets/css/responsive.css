@@ -20,6 +20,11 @@
     {
         text-align: center;
     }
+    .content__develop__container-img
+    {
+        width: 400px;
+        height: 340px;
+    }
  }
 
 @media(min-width:1024px)   /*  */
@@ -31,6 +36,10 @@
     .wide
     {
         width: 700px;
+    }
+    .header
+    {
+        min-height: 650px;
     }
     .header__text-Welcome
     {
@@ -48,6 +57,11 @@
     .content__information__item__description
     {
         font-size: 14px;
+    }
+    .content__contact
+    {
+        width: 90%;
+        height: 60%;
     }
  }
  /* moblie */
@@ -96,23 +110,22 @@
     {
         display: block;
     }
-
     .bar-moblie-list
     {
+        padding-left: 0;
+    }
+    .header__nav-item
+    {
         list-style-type: none;
-        margin-top: 48px;
+        margin-top: 28px;
         font-size: 18px;
         font-weight: 500;
-    }
-    .bar-moblie-item
-    {
-
         display: block;
         padding: 8px 0;
         padding-left: 10%;
         margin-right: 10%;
     }
-    .bar-moblie-item a
+    .header__nav-item a
 {
     text-decoration: none;
     color: var(--black-color);
@@ -197,8 +210,101 @@
     .content__text-stock__description
     {
         display: none;
+    }
+    .content__text-about
+    {
+        width: 100%;
+    }
+    .content__silde-tablet
+    {
+        width: 280px;
+        height: 400px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .content__silde-tablet-img
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .content__silde-phone
+    {
+        width: 180px;
+        height: 350px;
+        left: 60%;
+    transform: translateX(-50%);
+    }
+    .content__silde-phone-img
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .content__develop__container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+ 
+    }
+    .content__develop__container-img
+    {
+        width: 300px;
+        height: 250px;
+    }
+    .content__develop__container__wrap
+    {
+        margin-top:24px;
+        width: 100%;
+    }
+    .content__develop__description
+    {
+        width: 100%;
+    }
+    .content__develop__description__heading
+    {
 
     }
-
+    .content__develop__description__heading__icon
+    {
+        margin-right: 24px;
+    }
+    .content__opinion__img
+    {
+        width: 40px;
+    }
+    .content__opinion__item__heading
+    {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+    }
+    .content__contact
+    {
+        height: 60%;
+        width: 90%;
+    }
+    .content__infor
+    {
+        height: 200px;
+        overflow-y: auto;
+        padding-right: 8px;
+        margin-bottom: 28px;
+    }
+    .content__wrap
+    {
+        flex-wrap: wrap;
+    }
+    .content__contact img
+    {
+        display: none;
+    }
 
 }

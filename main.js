@@ -2,6 +2,15 @@ const getMenuBar = document.querySelector(".header__nav-bar-moblie")
 const getModalbar =document.querySelector(".modal-bar-moblie")
 const getContainerBar =document.querySelector(".container-bar-moblie")
 const getClose = document.querySelector(".close-modal-moblie")
+const getItemBarMoblie = document.querySelectorAll(".header__nav-item")
+const ArrayItemBarMoblie = [...getItemBarMoblie]
+ArrayItemBarMoblie.forEach(function(item)
+{
+    item.addEventListener("click",function(event)
+    {
+      getModalbar.classList.remove("active")
+    })
+})
 getMenuBar.addEventListener("click",function()
 {
     getModalbar.classList.add("active")
@@ -15,7 +24,7 @@ function handClick(event)
 {
     if(!getContainerBar.contains(event.target) && !event.target.matches(".header__nav-bar-moblie-icon"))
     {
-        getModalbar.classList.remove("active") 
+        getModalbar.classList.remove("active")
     } 
 }
 
@@ -40,8 +49,8 @@ function clickShow()
                 ArrayContent__develop__body.forEach(function(item)
                         {
                             item.nextElementSibling.classList.remove("is-show")
-                            item.firstElementChild.lastElementChild.classList.remove("fa-angle-up")
-                            item.firstElementChild.lastElementChild.classList.add("fa-angle-down")
+                            item.lastElementChild.classList.remove("fa-angle-up")
+                            item.lastElementChild.classList.add("fa-angle-down")
 
                         })
                         const nextElement = event.currentTarget.nextElementSibling
