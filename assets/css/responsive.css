@@ -108,7 +108,7 @@
     }
     .active
     {
-        display: block;
+        display: flex;
     }
     .bar-moblie-list
     {
@@ -151,6 +151,20 @@
     .header__bar-item__text
     {
         font-size: 12px;
+    }
+    .modal__body 
+    {
+        width: 230px;
+    }
+    .light-box
+    {
+      width: 100%;
+      height: 200px;
+    }
+    .light-box__back ,.light-box__next
+    {
+        padding: 4px 8px;
+        font-size: 18px;
     }
     .content__text-intro
     {
