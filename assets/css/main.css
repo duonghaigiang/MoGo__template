@@ -463,7 +463,7 @@ height: 100%;
 .content__slide::before
 {
     content: "";
-    background-image: url('../img/MeGo_content_slice.jpg');
+    background-image: url('/assets/img/MeGo_content_slice.jpg');
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -769,7 +769,7 @@ height: 100%;
 .content__contact img
 {
     width: 354px;
-    height: 454px;
+    height: 494px;
     border-radius: 5px;
     margin: 20px 40px;
 
