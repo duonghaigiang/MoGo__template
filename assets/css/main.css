@@ -288,14 +288,16 @@
   text-align: center;
   width: 100%;
 }
-.content__product {
+.content__product,
+.meetTeam {
   margin-top: var(--margin-top-96px);
   margin-bottom: var(--margin-top-96px);
   width: 100%;
   height: 254px;
   position: relative;
 }
-.content__product:hover {
+.content__product:hover,
+.meetTeam:hover {
   cursor: pointer;
   animation: jumUp 0.4s linear;
 }
@@ -733,4 +735,14 @@
 }
 .content__infor::-webkit-scrollbar-thumb {
   background-color: var(--thirt-color);
+}
+.meetTeam {
+  width: 90%;
+}
+.content__banner-img img {
+  background-color: red;
+}
+.content__banner-img {
+  width: 100%;
+  height: 100%;
 }

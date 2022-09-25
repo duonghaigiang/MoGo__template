@@ -37,9 +37,9 @@
             <div class="header__nav-left">MoGo</div>
             <ul class="header__nav-listRight">
               <div class="header__nav-wrap__item">
-                <li class="header__nav-item"><a href="#">About</a></li>
-                <li class="header__nav-item"><a href="#">Service</a></li>
-                <li class="header__nav-item"><a href="#">Work</a></li>
+                <li class="header__nav-item"><a href="#About">About</a></li>
+                <li class="header__nav-item"><a href="#Service">Service</a></li>
+                <li class="header__nav-item"><a href="#Work">Work</a></li>
                 <li class="header__nav-item"><a href="#">Blog</a></li>
                 <li class="header__nav-item">
                   <a href="#" data-tab="4">Contact</a>
@@ -85,12 +85,24 @@
                   <i class="fa-solid fa-xmark close-modal-moblie-icon"></i>
                 </div>
                 <ul class="bar-moblie-list">
-                  <li class="header__nav-item"><a href="">ABOUT</a></li>
-                  <li class="header__nav-item"><a href="">SERVICE</a></li>
-                  <li class="header__nav-item"><a href="">WORK</a></li>
-                  <li class="header__nav-item"><a href="">BLOG</a></li>
                   <li class="header__nav-item">
-                    <a href="#" data-tab="4">CONTACT</a>
+                    <a href="#About">
+                      <i class="fa-regular fa-address-card"></i>ABOUT</a
+                    >
+                  </li>
+                  <li class="header__nav-item">
+                    <a href=""><i class="fa-brands fa-usps"></i>SERVICE</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a href=""><i class="fa-solid fa-briefcase"></i>WORK</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a href=""><i class="fa-solid fa-blog"></i>BLOG</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a href="#" data-tab="4"
+                      ><i class="fa-solid fa-address-book"></i>CONTACT</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -140,7 +152,7 @@
 
       <div class="content">
         <div class="grid wide">
-          <div class="content__text-about">
+          <div class="content__text-about" id="About">
             <div class="content__text-about__description">What we do</div>
             <h2 class="content__text-about__heading">story about us</h2>
           </div>
@@ -233,7 +245,7 @@
                 </div>
               </div>
             </div>
-            <div class="content__text-about">
+            <div class="content__text-about" id="Service">
               <div class="content__text-about__description">We work with</div>
               <h2 class="content__text-about__heading">Amazing Services</h2>
             </div>
@@ -372,7 +384,7 @@
               </div>
             </div>
           </div>
-          <div class="content__develop">
+          <div class="content__develop" id="Work">
             <div class="grid wide">
               <div class="content__text-about">
                 <div class="content__text-about__description">Service</div>
@@ -499,7 +511,6 @@
                   class="fa-solid fa-chevron-right content__opinion-iconNext"
                 ></i>
               </div>
-
               <div class="content__opinion__wrap">
                 <i
                   class="fa-solid fa-chevron-left content__opinion-iconBack"
@@ -513,14 +524,96 @@
                 <div class="content__opinion__item">
                   <div class="content__opinion__item__heading">
                     “Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                    slabore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation.”
                   </div>
-                  <div class="content__opinion__item__sign">Jon Doe</div>
+                  <div class="content__opinion__item__sign">John Cena</div>
                 </div>
                 <i
                   class="fa-solid fa-chevron-right content__opinion-iconNext"
                 ></i>
+              </div>
+              <div class="content__opinion__wrap">
+                <i
+                  class="fa-solid fa-chevron-left content__opinion-iconBack"
+                ></i>
+                <img
+                  src="./assets/img/MoGo_fontopinion1.jpg"
+                  alt=""
+                  class="content__opinion__img"
+                  style="border: 2px solid var(--sencond-color)"
+                />
+                <div class="content__opinion__item">
+                  <div class="content__opinion__item__heading">
+                    “Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                    amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam,”
+                  </div>
+                  <div class="content__opinion__item__sign">john Wick</div>
+                </div>
+                <i
+                  class="fa-solid fa-chevron-right content__opinion-iconNext"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="grid wide">
+            <div class="content__text-about">
+              <div class="content__text-about__description">Who we are</div>
+              <h2 class="content__text-about__heading">Meet our team</h2>
+            </div>
+            <div class="content__text-intro">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <div class="row">
+              <div class="col l-4 m-12 c-12">
+                <div
+                  class="meetTeam"
+                  style="box-shadow: 8px 9px 0 0px #95e1d3; height: 320px"
+                >
+                  <img
+                    src="./assets/img/MoGo_Meete1.jpg"
+                    alt="contact to us"
+                    class="content__product-img"
+                  />
+                  <div class="content__product-img--gardient">
+                    <div class="content__product-img__text">
+                      <i class="fa-solid fa-user"></i>
+                      super team
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-4 m-12 c-12">
+                <div class="meetTeam" style="height: 320px">
+                  <img
+                    src="./assets/img/MoGo_Meet2.jpg"
+                    alt="contact to us"
+                    class="content__product-img"
+                  />
+                </div>
+              </div>
+              <div class="col l-4 m-12 c-12">
+                <div class="meetTeam" style="height: 320px">
+                  <img
+                    src="./assets/img/MoGo_Meet3.jpg"
+                    alt="contact to us"
+                    class="content__product-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__opinion">
+            <div class="grid wide">
+              <div class="content__banner-img">
+                <img src="./assets/img/LogoMeMO.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -542,5 +635,7 @@
       <!-- footer  -->
     </div>
     <script src="./main.js"></script>
+    <script src="./opinion.js"></script>
+    <script src="./meetTeam.js"></script>
   </body>
 </html>
