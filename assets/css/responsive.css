@@ -114,6 +114,14 @@
     {
         padding-left: 0;
     }
+    .header__nav-input
+    {
+        display: none;
+    }
+    .header__nav-textSearch
+    {
+        display: none;
+    }
     .header__nav-item
     {
         list-style-type: none;
@@ -163,7 +171,7 @@
     }
     .light-box__back ,.light-box__next
     {
-        padding: 4px 8px;
+        padding: 8px 12px;
         font-size: 18px;
     }
     .content__text-intro

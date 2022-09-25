@@ -1,412 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap-5.2.0-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/font/css/all.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap/bootstrap-5.2.0-dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/font/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        
-        <div class="header">
+      <div class="header">
+        <div class="grid wide">
+          <div class="header__nav">
+            <div class="header__nav-left">MoGo</div>
+            <ul class="header__nav-listRight">
+              <div class="header__nav-wrap__item">
+                <li class="header__nav-item"><a href="#">About</a></li>
+                <li class="header__nav-item"><a href="#">Service</a></li>
+                <li class="header__nav-item"><a href="#">Work</a></li>
+                <li class="header__nav-item"><a href="#">Blog</a></li>
+                <li class="header__nav-item">
+                  <a href="#" data-tab="4">Contact</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href=""
+                    ><i
+                      class="fa-solid fa-cart-shopping header__nav-link-icon"
+                    ></i
+                  ></a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" data-tab="6"
+                    ><i
+                      class="fa-solid fa-magnifying-glass header__nav-link-icon"
+                    ></i
+                  ></a>
+                </li>
+              </div>
+              <div class="header__nav-input-wrap">
+                <input type="text" class="header__nav-input" data-tab="6" />
+                <div class="header__nav-textSearch">
+                  <ul class="header__nav-textSearch__list">
+                    <li class="header__nav-textSearch__item">
+                      <a href="">How to search</a>
+                    </li>
+                    <li class="header__nav-textSearch__item">
+                      <a href="">How to learn</a>
+                    </li>
+                    <li class="header__nav-textSearch__item">
+                      <a href="">What</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+            <div class="header__nav-bar-moblie">
+              <i class="fa-solid fa-bars header__nav-bar-moblie-icon"></i>
+            </div>
+            <div class="modal-bar-moblie">
+              <div class="container-bar-moblie">
+                <div class="close-modal-moblie">
+                  <i class="fa-solid fa-xmark close-modal-moblie-icon"></i>
+                </div>
+                <ul class="bar-moblie-list">
+                  <li class="header__nav-item"><a href="">ABOUT</a></li>
+                  <li class="header__nav-item"><a href="">SERVICE</a></li>
+                  <li class="header__nav-item"><a href="">WORK</a></li>
+                  <li class="header__nav-item"><a href="">BLOG</a></li>
+                  <li class="header__nav-item">
+                    <a href="#" data-tab="4">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__text">
+            <div class="header__text-title">Creat Template</div>
+            <div class="header__text-Welcome">welcome to mogo</div>
+            <div class="header__text-more">
+              <a href="">Learn More</a>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="col l-3 m-3 c-3">
+              <div class="header__bar-item">
+                <div class="header__bar-item__text">
+                  <span class="header__bar-item__text-number">01 </span> Intro
+                </div>
+              </div>
+            </div>
+            <div class="col l-3 m-3 c-3">
+              <div class="header__bar-item">
+                <div class="header__bar-item__text">
+                  <span class="header__bar-item__text-number">02 </span> Work
+                </div>
+              </div>
+            </div>
+            <div class="col l-3 m-3 c-3">
+              <div class="header__bar-item">
+                <div class="header__bar-item__text">
+                  <span class="header__bar-item__text-number">03 </span>About
+                </div>
+              </div>
+            </div>
+            <div class="col l-3 m-3 c-3">
+              <div class="header__bar-item">
+                <div class="header__bar-item__text">
+                  <span class="header__bar-item__text-number">04 </span> Contact
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header  -->
+
+      <div class="content">
+        <div class="grid wide">
+          <div class="content__text-about">
+            <div class="content__text-about__description">What we do</div>
+            <h2 class="content__text-about__heading">story about us</h2>
+          </div>
+          <div class="content__text-intro">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </div>
+          <div class="row">
+            <div class="col l-4 m-12 c-12">
+              <div
+                class="content__product"
+                style="box-shadow: 8px 9px 0 0px #95e1d3"
+              >
+                <img
+                  src="./assets/img/About-US1.jpg"
+                  alt="contact to us"
+                  class="content__product-img"
+                />
+                <div class="content__product-img--gardient">
+                  <div class="content__product-img__text">
+                    <i class="fa-solid fa-user"></i>
+                    super team
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col l-4 m-12 c-12">
+              <div class="content__product">
+                <img
+                  src="./assets/img/About-US2.jpg"
+                  alt="contact to us"
+                  class="content__product-img"
+                />
+              </div>
+            </div>
+            <div class="col l-4 m-12 c-12">
+              <div class="content__product">
+                <img
+                  src="./assets/img/About-US3.jpg"
+                  alt="contact to us"
+                  class="content__product-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__information">
+          <div class="grid wide">
+            <div class="row no-gutters">
+              <div class="col l-2-4 m-2-4 c-12 no-gutters">
+                <div class="content__information__item">
+                  <span class="content__information__item__amount">42</span>
+                  <div class="content__information__item__description">
+                    Web Design Projects
+                  </div>
+                </div>
+              </div>
+              <div class="col l-2-4 m-2-4 c-12 no-gutters">
+                <div class="content__information__item">
+                  <span class="content__information__item__amount">123</span>
+                  <div class="content__information__item__description">
+                    happy client
+                  </div>
+                </div>
+              </div>
+              <div class="col l-2-4 m-2-4 c-12 no-gutters">
+                <div class="content__information__item">
+                  <span class="content__information__item__amount">15</span>
+                  <div class="content__information__item__description">
+                    award winner
+                  </div>
+                </div>
+              </div>
+              <div class="col l-2-4 m-2-4 c-12 no-gutters">
+                <div class="content__information__item">
+                  <span class="content__information__item__amount">99</span>
+                  <div class="content__information__item__description">
+                    cup of coffee
+                  </div>
+                </div>
+              </div>
+              <div class="col l-2-4 m-2-4 c-12 no-gutters">
+                <div class="content__information__item">
+                  <span class="content__information__item__amount">24</span>
+                  <div class="content__information__item__description">
+                    members
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content__text-about">
+              <div class="content__text-about__description">We work with</div>
+              <h2 class="content__text-about__heading">Amazing Services</h2>
+            </div>
+            <div class="row no-gutters" style="margin-top: 18px">
+              <div class="col l-4 m-4 c-4">
+                <div class="content__text-stock">
+                  <div class="content__text-stock__font">
+                    <img
+                      src="./assets/img/MoGo_font-clock.jpg"
+                      alt=""
+                      class="content__text-stock__font-img"
+                    />
+                  </div>
+                  <div class="content__text-stock__wrap">
+                    <h4 class="content__text-stock__heading">Photography</h4>
+                    <div class="content__text-stock__description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-4 m-4 c-4">
+                <div class="content__text-stock">
+                  <div class="content__text-stock__font">
+                    <img
+                      src="./assets/img/MoGo__plot.jpg"
+                      alt=""
+                      class="content__text-stock__font-img"
+                    />
+                  </div>
+                  <div class="content__text-stock__wrap">
+                    <h4 class="content__text-stock__heading">Web Design</h4>
+                    <div class="content__text-stock__description">
+                      Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-4 m-4 c-4">
+                <div class="content__text-stock">
+                  <div class="content__text-stock__font">
+                    <img
+                      src="./assets/img/MoGo_screem.jpg"
+                      alt=""
+                      class="content__text-stock__font-img"
+                    />
+                  </div>
+                  <div class="content__text-stock__wrap">
+                    <h4 class="content__text-stock__heading">Creativity</h4>
+                    <div class="content__text-stock__description">
+                      Dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-4 m-4 c-4">
+                <div class="content__text-stock">
+                  <div class="content__text-stock__font">
+                    <img
+                      src="./assets/img/MoGo_font-clock.jpg"
+                      alt=""
+                      class="content__text-stock__font-img"
+                    />
+                  </div>
+                  <div class="content__text-stock__wrap">
+                    <h4 class="content__text-stock__heading">Photography</h4>
+                    <div class="content__text-stock__description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-4 m-4 c-4">
+                <div class="content__text-stock">
+                  <div class="content__text-stock__font">
+                    <img
+                      src="./assets/img/MoGo__plot.jpg"
+                      alt=""
+                      class="content__text-stock__font-img"
+                    />
+                  </div>
+                  <div class="content__text-stock__wrap">
+                    <h4 class="content__text-stock__heading">Web Design</h4>
+                    <div class="content__text-stock__description">
+                      Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-4 m-4 c-4">
+                <div class="content__text-stock">
+                  <div class="content__text-stock__font">
+                    <img
+                      src="./assets/img/MoGo_screem.jpg"
+                      alt=""
+                      class="content__text-stock__font-img"
+                    />
+                  </div>
+                  <div class="content__text-stock__wrap">
+                    <h4 class="content__text-stock__heading">Creativity</h4>
+                    <div class="content__text-stock__description">
+                      Dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__slide">
             <div class="grid wide">
-             <div class="header__nav">
-                 <div class="header__nav-left">
-                     MoGo
-                 </div>
-                 <ul class="header__nav-listRight">
-                    <li class="header__nav-item"><a href="#">About</a></li>
-                    <li class="header__nav-item"><a href="#">Service</a></li>
-                    <li class="header__nav-item"><a href="#">Work</a></li>
-                    <li class="header__nav-item"><a href="#">Blog</a></li>
-                    <li class="header__nav-item" ><a href="#" data-tab="4">Contact</a></li>
-                    <li class="header__nav-item"><a href=""><i class="fa-solid fa-cart-shopping header__nav-link-icon"></i></a></li>
-                    <li class="header__nav-item"><a href=""><i class="fa-solid fa-magnifying-glass header__nav-link-icon"></i></a></li>
-                 </ul>
-                 <div class="header__nav-bar-moblie">
-                    <i class="fa-solid fa-bars header__nav-bar-moblie-icon"></i>
-                 </div>
-                 <div class="modal-bar-moblie ">
-              
-                    <div class="container-bar-moblie ">
-                              <div class="close-modal-moblie">
-                        <i class="fa-solid fa-xmark close-modal-moblie-icon"></i>
-                    </div>
-                    <ul class="bar-moblie-list">
-                        <li class="header__nav-item"><a href="">ABOUT</a></li>
-                        <li class="header__nav-item"><a href="">SERVICE</a></li>
-                        <li class="header__nav-item"><a href="">WORK</a></li>
-                        <li class="header__nav-item"><a href="">BLOG</a></li>
-                        <li class="header__nav-item"><a href="#" data-tab="4">CONTACT</a></li>
-                    </ul>
-                    </div>
-                 </div>
-                 
-             </div>
-             <div class="header__text">
-                    <div class="header__text-title">
-                        Creat Template
-                    </div>
-                    <div class="header__text-Welcome">
-                        welcome to mogo
-                    </div>
-                    <div class="header__text-more">
-                        <a href="">Learn More</a>
-                    </div>
-             </div>
-
-                <div class="row">
-                    <div class="col l-3 m-3 c-3">
-                        <div class="header__bar-item">
-                             <div class="header__bar-item__text">
-                             <span class="header__bar-item__text-number">01 </span> Intro
-                             </div>
-                        </div>
-
-                    </div>
-                    <div class="col l-3 m-3 c-3">
-                        <div class="header__bar-item">
-                             <div class="header__bar-item__text">
-                                <span class="header__bar-item__text-number">02 </span> Work
-                             </div>
-                        </div>
-
-                    </div>
-                    <div class="col l-3 m-3 c-3">
-                        <div class="header__bar-item">
-                             <div class="header__bar-item__text">
-                                <span class="header__bar-item__text-number">03 </span>About
-                             </div>
-                        </div>
-
-                    </div>
-                    <div class="col l-3 m-3 c-3">
-                        <div class="header__bar-item">
-                             <div class="header__bar-item__text">
-                                <span class="header__bar-item__text-number">04 </span> Contact
-                             </div>
-                        </div>
-
-                    </div>
-                 </div>
-
+              <div class="content__text-about">
+                <div class="content__text-about__description">
+                  For all devices
+                </div>
+                <h2 class="content__text-about__heading">Unique design</h2>
+              </div>
+              <div class="content__silde-tablet">
+                <img
+                  src="./assets/img/tabletDescription.jpg"
+                  alt=""
+                  class="content__silde-tablet-img"
+                />
+              </div>
+              <div class="content__silde-phone">
+                <img
+                  src="./assets/img/PhoneDescription.jpg"
+                  alt=""
+                  class="content__silde-phone-img"
+                />
+              </div>
             </div>
- 
-        </div>  <!-- header  -->
- 
-         <div class="content">
+          </div>
+          <div class="content__develop">
             <div class="grid wide">
-                <div class="content__text-about">
-                    <div class="content__text-about__description">
-                        What we do
+              <div class="content__text-about">
+                <div class="content__text-about__description">Service</div>
+                <h2 class="content__text-about__heading">what we do</h2>
+              </div>
+              <div class="content__text-intro">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </div>
+              <div class="content__develop__container">
+                <img
+                  src="./assets/img/PhotoGrapherDesciption.jpg"
+                  alt=""
+                  class="content__develop__container-img"
+                />
+                <div class="content__develop__container__wrap">
+                  <div class="content__develop__description">
+                    <div class="content__develop__description__heading">
+                      <img
+                        src="./assets/img/MoGo_font-develop1.jpg"
+                        alt=""
+                        class="content__develop__description__heading__img"
+                      />
+                      <div class="content__develop__description__heading__text">
+                        Photography
+                      </div>
                     </div>
-                    <h2 class="content__text-about__heading">
-                        story about us
-                    </h2>
+                    <i
+                      class="fa-solid fa-angle-down content__develop__description__heading__icon"
+                    ></i>
+                  </div>
+                  <div class="content__develop__body">
+                    <div class="content__develop__body__text">
+                      Lorem 1 ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="content__develop__description">
+                    <div class="content__develop__description__heading">
+                      <img
+                        src="./assets/img/MoGo_font-develop2.jpg"
+                        alt=""
+                        class="content__develop__description__heading__img"
+                      />
+                      <div class="content__develop__description__heading__text">
+                        creativity
+                      </div>
+                    </div>
+                    <i
+                      class="fa-solid fa-angle-down content__develop__description__heading__icon"
+                    ></i>
+                  </div>
+                  <div class="content__develop__body">
+                    <div class="content__develop__body__text">
+                      Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="content__develop__description">
+                    <div class="content__develop__description__heading">
+                      <img
+                        src="./assets/img/MoGo_font-develop3.jpg"
+                        alt=""
+                        class="content__develop__description__heading__img"
+                      />
+                      <div class="content__develop__description__heading__text">
+                        web design
+                      </div>
+                    </div>
+                    <i
+                      class="fa-solid fa-angle-down content__develop__description__heading__icon"
+                    ></i>
+                  </div>
+                  <div class="content__develop__body">
+                    <div class="content__develop__body__text">
+                      Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
                 </div>
-                <div class="content__text-intro">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="row">
-                    <div class="col l-4 m-12 c-12">
-                        <div class="content__product" style="  box-shadow: 8px 9px 0 0px #95e1d3;">
-                            <img src="./assets/img/About-US1.jpg" alt="contact to us" class="content__product-img ">
-                            <div class="content__product-img--gardient">
-                                <div class="content__product-img__text">
-                                    <i class="fa-solid fa-user"></i>
-                                    super team
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l-4 m-12 c-12">
-                        <div class="content__product">
-                            <img src="./assets/img/About-US2.jpg" alt="contact to us" class="content__product-img">
-                        </div>
-                    </div>
-                    <div class="col l-4 m-12 c-12">
-                        <div class="content__product">
-                            <img src="./assets/img/About-US3.jpg" alt="contact to us" class="content__product-img">
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="content__information">
-                <div class="grid wide">
-                    <div class="row no-gutters">
-                        <div class="col l-2-4 m-2-4 c-12 no-gutters">
-                            <div class="content__information__item">
-                                <span class="content__information__item__amount">42</span>
-                                <div class="content__information__item__description">Web Design Projects</div>
-                            </div>
-                        </div>
-                        <div class="col l-2-4 m-2-4 c-12 no-gutters">
-                            <div class="content__information__item">
-                                <span class="content__information__item__amount">123</span>
-                                <div class="content__information__item__description">happy client</div>
-                            </div>
-                        </div>
-                        <div class="col l-2-4 m-2-4 c-12 no-gutters">
-                            <div class="content__information__item">
-                                <span class="content__information__item__amount">15</span>
-                                <div class="content__information__item__description">award winner</div>
-                            </div>
-                        </div>
-                        <div class="col l-2-4 m-2-4 c-12 no-gutters">
-                            <div class="content__information__item">
-                                <span class="content__information__item__amount">99</span>
-                                <div class="content__information__item__description">cup of coffee</div>
-                            </div>
-                        </div>
-                        <div class="col l-2-4 m-2-4 c-12 no-gutters">
-                            <div class="content__information__item">
-                                <span class="content__information__item__amount">24</span>
-                                <div class="content__information__item__description">members</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content__text-about">
-                        <div class="content__text-about__description">
-                            We work with
-                        </div>
-                        <h2 class="content__text-about__heading">
-                            Amazing Services
-                        </h2>
-                    </div>
-                    <div class="row no-gutters" style="margin-top: 18px;">
-                        <div class="col l-4 m-4 c-4">
-                            <div class="content__text-stock">
-                             <div class="content__text-stock__font">
-                                <img src="./assets/img/MoGo_font-clock.jpg" alt="" class="content__text-stock__font-img">  
-                             </div>
-                              <div class="content__text-stock__wrap">
-                                <h4 class="content__text-stock__heading">
-                                    Photography
-                                </h4>
-                                <div class="content__text-stock__description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col l-4 m-4 c-4">
-                                <div class="content__text-stock">
-                                    <div class="content__text-stock__font">
-                                       <img src="./assets/img/MoGo__plot.jpg" alt="" class="content__text-stock__font-img">  
-                                    </div>
-                                     <div class="content__text-stock__wrap">
-                                       <h4 class="content__text-stock__heading">
-                                        Web Design
-                                       </h4>
-                                       <div class="content__text-stock__description">
-                                        Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                       </div>
-                                     </div>
-                                   </div>
-                        </div>
-                        <div class="col l-4 m-4 c-4">
-                                <div class="content__text-stock">
-                                    <div class="content__text-stock__font">
-                                       <img src="./assets/img/MoGo_screem.jpg" alt="" class="content__text-stock__font-img">  
-                                    </div>
-                                     <div class="content__text-stock__wrap">
-                                       <h4 class="content__text-stock__heading">
-                                        Creativity
-                                       </h4>
-                                       <div class="content__text-stock__description">
-                                        Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                       </div>
-                                     </div>
-                                   </div>
-                        </div>
-                        <div class="col l-4 m-4 c-4">
-                            <div class="content__text-stock">
-                             <div class="content__text-stock__font">
-                                <img src="./assets/img/MoGo_font-clock.jpg" alt="" class="content__text-stock__font-img">  
-                             </div>
-                              <div class="content__text-stock__wrap">
-                                <h4 class="content__text-stock__heading">
-                                    Photography
-                                </h4>
-                                <div class="content__text-stock__description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col l-4 m-4 c-4">
-                                <div class="content__text-stock">
-                                    <div class="content__text-stock__font">
-                                       <img src="./assets/img/MoGo__plot.jpg" alt="" class="content__text-stock__font-img">  
-                                    </div>
-                                     <div class="content__text-stock__wrap">
-                                       <h4 class="content__text-stock__heading">
-                                        Web Design
-                                       </h4>
-                                       <div class="content__text-stock__description">
-                                        Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                       </div>
-                                     </div>
-                                   </div>
-                        </div>
-                        <div class="col l-4 m-4 c-4">
-                                <div class="content__text-stock">
-                                    <div class="content__text-stock__font">
-                                       <img src="./assets/img/MoGo_screem.jpg" alt="" class="content__text-stock__font-img">  
-                                    </div>
-                                     <div class="content__text-stock__wrap">
-                                       <h4 class="content__text-stock__heading">
-                                        Creativity
-                                       </h4>
-                                       <div class="content__text-stock__description">
-                                        Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                       </div>
-                                     </div>
-                                   </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="content__opinion">
+            <div class="grid wide">
+              <div class="content__opinion__wrap">
+                <i
+                  class="fa-solid fa-chevron-left content__opinion-iconBack"
+                ></i>
+                <img
+                  src="./assets/img/MoGo_fontopinion.jpg"
+                  alt=""
+                  class="content__opinion__img"
+                />
+                <div class="content__opinion__item">
+                  <div class="content__opinion__item__heading">
+                    “Lorem 1 ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="content__opinion__item__sign">Jon Doe</div>
                 </div>
-                <div class="content__slide">
-                   <div class="grid wide">
-                        <div class="content__text-about" >
-                            <div class="content__text-about__description">
-                                For all devices
-                            </div>
-                            <h2 class="content__text-about__heading">
-                                Unique design
-                            </h2>
-                        </div>
-                        <div class="content__silde-tablet">
-                            <img src="./assets/img/tabletDescription.jpg" alt="" class="content__silde-tablet-img">
-                        </div>
-                        <div class="content__silde-phone">
-                            <img src="./assets/img/PhoneDescription.jpg" alt="" class="content__silde-phone-img">
-                        </div>
-                    </div>
+                <i
+                  class="fa-solid fa-chevron-right content__opinion-iconNext"
+                ></i>
+              </div>
+
+              <div class="content__opinion__wrap">
+                <i
+                  class="fa-solid fa-chevron-left content__opinion-iconBack"
+                ></i>
+                <img
+                  src="./assets/img/MoGo_fontopinion1.jpg"
+                  alt=""
+                  class="content__opinion__img"
+                  style="border: 2px solid var(--primary-color)"
+                />
+                <div class="content__opinion__item">
+                  <div class="content__opinion__item__heading">
+                    “Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="content__opinion__item__sign">Jon Doe</div>
                 </div>
-                <div class="content__develop">
-                    <div class="grid wide">
-                        <div class="content__text-about" >
-                            <div class="content__text-about__description">
-                                Service
-                            </div>
-                            <h2 class="content__text-about__heading">
-                                what we do
-                            </h2>
-                        </div>
-                        <div class="content__text-intro">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        </div>
-                        <div class="content__develop__container">
-                            <img src="./assets/img/PhotoGrapherDesciption.jpg" alt="" class="content__develop__container-img">
-                           <div class="content__develop__container__wrap">
-                            <div class="content__develop__description">
-                                <div class="content__develop__description__heading">
-                                    <img src="./assets/img/MoGo_font-develop1.jpg" alt="" class="content__develop__description__heading__img">
-                                    <div class="content__develop__description__heading__text">
-                                        Photography
-                                    </div>
-                                   
-                                </div>
-                                <i class="fa-solid fa-angle-down content__develop__description__heading__icon"></i>
-                            </div>
-                            <div class="content__develop__body">
-                                <div class="content__develop__body__text">
-                                    Lorem 1  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </div>
-                            </div>
-                            <div class="content__develop__description">
-                                <div class="content__develop__description__heading">
-                                    <img src="./assets/img/MoGo_font-develop2.jpg" alt="" class="content__develop__description__heading__img">
-                                    <div class="content__develop__description__heading__text">
-                                        creativity
-                                    </div>
-                                   
-                                </div>
-                                <i class="fa-solid fa-angle-down content__develop__description__heading__icon"></i>
-                            </div>
-                            <div class="content__develop__body">
-                                <div class="content__develop__body__text">
-                                    Lorem 2  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </div>
-                            </div>
-                            <div class="content__develop__description">
-                                <div class="content__develop__description__heading">
-                                    <img src="./assets/img/MoGo_font-develop3.jpg" alt="" class="content__develop__description__heading__img">
-                                    <div class="content__develop__description__heading__text">
-                                        web design
-                                    </div>
-                                   
-                                </div>
-                                <i class="fa-solid fa-angle-down content__develop__description__heading__icon"></i>
-                            </div>
-                            <div class="content__develop__body">
-                                <div class="content__develop__body__text">
-                                    Lorem 3  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </div>
-                            </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content__opinion">
-                    <div class="grid wide">
-                        <div class="content__opinion__wrap">
-                            <i class="fa-solid fa-chevron-left content__opinion-iconBack"></i>
-                            <img src="./assets/img/MoGo_fontopinion.jpg" alt="" class="content__opinion__img">
-                            <div class="content__opinion__item">
-                                <div class="content__opinion__item__heading">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                                </div>
-                                <div class="content__opinion__item__sign">
-                                    Jon Doe
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right content__opinion-iconNext"></i>
-                        </div>
-                        <!-- <div class="content__opinion__wrap" >
-                            <i class="fa-solid fa-chevron-left content__opinion-iconBack"></i>
-                            <img src="./assets/img/MoGo_fontopinion1.jpg" alt="" class="content__opinion__img" style="border: 2px solid var(--primary-color);">
-                            <div class="content__opinion__item">
-                                <div class="content__opinion__item__heading">
-                                    “Lorem 1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                                </div>
-                                <div class="content__opinion__item__sign">
-                                    Jon Doe
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right content__opinion-iconNext"></i>
-                        </div> -->
-                    </div>
-                </div>
+                <i
+                  class="fa-solid fa-chevron-right content__opinion-iconNext"
+                ></i>
+              </div>
             </div>
-         </div>   <!-- container  -->
-       <div class="modal">
+          </div>
+        </div>
+      </div>
+      <!-- container  -->
+      <div class="modal">
         <div class="modal__overlay"></div>
         <i class="fa-solid fa-chevron-left light-box__back"></i>
-        <div class="modal__body ">
-            <div class="light-box">
-                <img src="./assets/img/About-US1.jpg" alt="">
-            </div>
+        <div class="modal__body">
+          <div class="light-box">
+            <img src="./assets/img/About-US1.jpg" alt="" />
+          </div>
         </div>
         <i class="fa-solid fa-chevron-right light-box__next"></i>
-       </div>
-     
-         <div class="footer">
- 
-         </div>   <!-- footer  -->
+      </div>
+
+      <div class="footer"></div>
+      <!-- footer  -->
     </div>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>

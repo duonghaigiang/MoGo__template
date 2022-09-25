@@ -25,7 +25,10 @@ font-weight:300;
     --margin-top-96px:96px;
     /* [KaushanScript] [Roboto] */
 }
-
+.color-primary
+{
+  color: #e98283;
+}
 *
 {
     box-sizing: inherit;

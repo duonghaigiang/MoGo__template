@@ -1,157 +1,136 @@
-const getMenuBar = document.querySelector(".header__nav-bar-moblie")
-const getModalbar =document.querySelector(".modal-bar-moblie")
-const getContainerBar =document.querySelector(".container-bar-moblie")
-const getClose = document.querySelector(".close-modal-moblie")
-const getItemBarMoblie = document.querySelectorAll(".header__nav-item")
-const ArrayItemBarMoblie = [...getItemBarMoblie]
-ArrayItemBarMoblie.forEach(function(item)
-{
-    item.addEventListener("click",function(event)
-    {
-      getModalbar.classList.remove("active")
-    })
-})
-getMenuBar.addEventListener("click",function()
-{
-    getModalbar.classList.add("active")
-})
-getClose.addEventListener("click",function()
-{
-    getModalbar.classList.remove("active") 
-})
-document.addEventListener("click", handClick)
-function handClick(event)
-{
-    if(!getContainerBar.contains(event.target) && !event.target.matches(".header__nav-bar-moblie-icon"))
-    {
-        getModalbar.classList.remove("active")
-    } 
+const getMenuBar = document.querySelector(".header__nav-bar-moblie");
+const getModalbar = document.querySelector(".modal-bar-moblie");
+const getContainerBar = document.querySelector(".container-bar-moblie");
+const getClose = document.querySelector(".close-modal-moblie");
+const getItemBarMoblie = document.querySelectorAll(".header__nav-item");
+const ArrayItemBarMoblie = [...getItemBarMoblie];
+ArrayItemBarMoblie.forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    getModalbar.classList.remove("active");
+  });
+});
+getMenuBar.addEventListener("click", function () {
+  getModalbar.classList.add("active");
+});
+getClose.addEventListener("click", function () {
+  getModalbar.classList.remove("active");
+});
+document.addEventListener("click", handClick);
+function handClick(event) {
+  if (
+    !getContainerBar.contains(event.target) &&
+    !event.target.matches(".header__nav-bar-moblie-icon")
+  ) {
+    getModalbar.classList.remove("active");
+  }
 }
 
-const content__develop__body = document.querySelectorAll(".content__develop__description")
-const ArrayContent__develop__body = [...content__develop__body]
-function clickShow()
-{
-    ArrayContent__develop__body.forEach(function(item)
-    {
-        item.addEventListener("click",function(event)
-        {
-            if(event.currentTarget.nextElementSibling.matches(".is-show"))
-            {
-             const nextElement = event.currentTarget.nextElementSibling
-             nextElement.classList.toggle("is-show")
-             const icon = event.currentTarget.querySelector(".content__develop__description__heading__icon")
-             icon.classList.toggle("fa-angle-down")
-             icon.classList.toggle("fa-angle-up")
-            }
-            else
-            {
-                ArrayContent__develop__body.forEach(function(item)
-                        {
-                            item.nextElementSibling.classList.remove("is-show")
-                            item.lastElementChild.classList.remove("fa-angle-up")
-                            item.lastElementChild.classList.add("fa-angle-down")
-
-                        })
-                        const nextElement = event.currentTarget.nextElementSibling
-                        nextElement.classList.toggle("is-show")
-                        const icon = event.currentTarget.querySelector(".content__develop__description__heading__icon")
-                        icon.classList.toggle("fa-angle-down")
-                        icon.classList.toggle("fa-angle-up")
-            }
-        })
-    })
-
+const content__develop__body = document.querySelectorAll(
+  ".content__develop__description"
+);
+const ArrayContent__develop__body = [...content__develop__body];
+function clickShow() {
+  ArrayContent__develop__body.forEach(function (item) {
+    item.addEventListener("click", function (event) {
+      if (event.currentTarget.nextElementSibling.matches(".is-show")) {
+        const nextElement = event.currentTarget.nextElementSibling;
+        nextElement.classList.toggle("is-show");
+        const icon = event.currentTarget.querySelector(
+          ".content__develop__description__heading__icon"
+        );
+        icon.classList.toggle("fa-angle-down");
+        icon.classList.toggle("fa-angle-up");
+      } else {
+        ArrayContent__develop__body.forEach(function (item) {
+          item.nextElementSibling.classList.remove("is-show");
+          item.lastElementChild.classList.remove("fa-angle-up");
+          item.lastElementChild.classList.add("fa-angle-down");
+        });
+        const nextElement = event.currentTarget.nextElementSibling;
+        nextElement.classList.toggle("is-show");
+        const icon = event.currentTarget.querySelector(
+          ".content__develop__description__heading__icon"
+        );
+        icon.classList.toggle("fa-angle-down");
+        icon.classList.toggle("fa-angle-up");
+      }
+    });
+  });
 }
-clickShow()
+clickShow();
 
-{/*  */}
+{
+  /*  */
+}
 
-
-const getImage = document.querySelectorAll(".content__product")
-const ArayImage = [...getImage]
-const getSrc = document.querySelectorAll(".content__product img")
-const ArraySrc = [...getSrc]
-const getimg = document.querySelector(".light-box img")
-const getModal = document.querySelector(".modal")
-const getoverlay = document.querySelector(".modal__overlay")
-const getNext =document.querySelector(".light-box__next")
-const getBack =document.querySelector(".light-box__back")
-let i =0
-const templeta =`.modal__body{
+const getImage = document.querySelectorAll(".content__product");
+const ArayImage = [...getImage];
+const getSrc = document.querySelectorAll(".content__product img");
+const ArraySrc = [...getSrc];
+const getimg = document.querySelector(".light-box img");
+const getModal = document.querySelector(".modal");
+const getoverlay = document.querySelector(".modal__overlay");
+const getNext = document.querySelector(".light-box__next");
+const getBack = document.querySelector(".light-box__back");
+let i = 0;
+const templeta = `.modal__body{
     animation:tranferImg 0.4s linear;
-}`
-ArayImage.forEach(function(item)
-{
-    item.addEventListener("click",function(event)
-    {
-        const src =  event.currentTarget.firstElementChild.getAttribute("src")
-        getimg.setAttribute("src",src)
-        getModal.classList.add("active")
-        getModal.addEventListener("click",function(event)
-        {
-            if(event.target.matches(".modal__overlay") && !event.target.matches(".modal i"))
-            {
-                getModal.classList.remove("active")
-            }
-            else if(event.target.matches(".light-box__next"))
-            {
-                tranferImg()
-                i = ArraySrc.findIndex(function(item)
-                {
-                   const getSrcLight = getimg.getAttribute("src")
-                   return item.getAttribute("src") === getSrcLight 
-                   // đối chiếu xem nó có bằng không nếu bằng thì nó tìm ra được vị trí index đó
-                })
-                i ++
-                if(i === 3)
-                {
-                    i = 0
-                }
-               const NextImg= ArraySrc[i].getAttribute("src")
-               getimg.setAttribute("src",NextImg)
-
-            }
-            else if(event.target.matches(".light-box__back"))
-            {
-                tranferImg1()
-                i = ArraySrc.findIndex(function(item)
-                {
-                    const getSrcLight = getimg.getAttribute("src")
-                    return item.getAttribute("src") === getSrcLight
-                })
-                i --
-                if( i<0 )
-                {
-                    i=2
-                }
-                const backimg = ArraySrc[i].getAttribute("src")
-                getimg.setAttribute("src",backimg)
-            }
-        })
-    })
-})
-function tranferImg()
-{
-    const getModalBody = document.querySelector(".modal__body")
-    getModalBody.classList.add("modal__body2")
-    setTimeout(function()
-    {
-    getModalBody.classList.remove("modal__body2")
-
-    },400)
+}`;
+ArayImage.forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    const src = event.currentTarget.firstElementChild.getAttribute("src");
+    getimg.setAttribute("src", src);
+    getModal.classList.add("active");
+    getModal.addEventListener("click", function (event) {
+      if (
+        event.target.matches(".modal__overlay") &&
+        !event.target.matches(".modal i")
+      ) {
+        getModal.classList.remove("active");
+      } else if (event.target.matches(".light-box__next")) {
+        tranferImg();
+        i = ArraySrc.findIndex(function (item) {
+          const getSrcLight = getimg.getAttribute("src");
+          return item.getAttribute("src") === getSrcLight;
+          // đối chiếu xem nó có bằng không nếu bằng thì nó tìm ra được vị trí index đó
+        });
+        i++;
+        if (i === 3) {
+          i = 0;
+        }
+        const NextImg = ArraySrc[i].getAttribute("src");
+        getimg.setAttribute("src", NextImg);
+      } else if (event.target.matches(".light-box__back")) {
+        tranferImg1();
+        i = ArraySrc.findIndex(function (item) {
+          const getSrcLight = getimg.getAttribute("src");
+          return item.getAttribute("src") === getSrcLight;
+        });
+        i--;
+        if (i < 0) {
+          i = 2;
+        }
+        const backimg = ArraySrc[i].getAttribute("src");
+        getimg.setAttribute("src", backimg);
+      }
+    });
+  });
+});
+function tranferImg() {
+  const getModalBody = document.querySelector(".modal__body");
+  getModalBody.classList.add("modal__body2");
+  setTimeout(function () {
+    getModalBody.classList.remove("modal__body2");
+  }, 400);
 }
-function tranferImg1()
-{
-    const getModalBody = document.querySelector(".modal__body")
-    getModalBody.classList.add("modal__body3")
-    setTimeout(function()
-    {
-    getModalBody.classList.remove("modal__body3")
-
-    },400)
+function tranferImg1() {
+  const getModalBody = document.querySelector(".modal__body");
+  getModalBody.classList.add("modal__body3");
+  setTimeout(function () {
+    getModalBody.classList.remove("modal__body3");
+  }, 400);
 }
-const modalContact = `  <div class="modal-contact">
+const modalContact = `  <div class="modal-contact" >
     <div class="content__contact">
 <div class="content__wrap">
     <h2 class="content__heading">
@@ -175,24 +154,55 @@ const modalContact = `  <div class="modal-contact">
         <img src="https://images.unsplash.com/photo-1661439387103-382ec41ff1aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80" alt="">
 
     </div>
-</div>`
-const getContact = document.querySelectorAll(".header__nav-item a")
-const arrayContact = [...getContact]
-arrayContact.forEach(function(item)
-{
-    item.addEventListener("click",function(event)
-    {
-       if(item.getAttribute("data-tab") === event.target.dataset.tab)
-       {
-          document.body.insertAdjacentHTML("beforeend",modalContact)
-       }
-       document.body.addEventListener("click",function(event)
-       {
-        if(event.target.matches(".modal-contact"))
-        {
-            event.target.parentNode.removeChild(event.target)
-        }
-       })
+</div>`;
+const getContact = document.querySelectorAll(".header__nav-item a");
+const arrayContact = [...getContact];
+arrayContact.forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    if (parseInt(item.getAttribute("data-tab")) === 4) {
+      document.body.insertAdjacentHTML("beforeend", modalContact);
+    }
+    document.body.addEventListener("click", function (event) {
+      if (event.target.matches(".modal-contact")) {
+        event.target.parentNode.removeChild(event.target);
+      }
+    });
+  });
+});
 
-    })
-})
+const getInputSearch = document.querySelector(".header__nav-input");
+const getTextSearch = document.querySelector(".header__nav-textSearch");
+arrayContact.forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    const searchIcon = parseInt(item.getAttribute("data-tab")) === 6;
+    if (searchIcon) {
+      getInputSearch.classList.toggle("is-show");
+      getTextSearch.classList.remove("is-show");
+    }
+    getInputSearch.addEventListener("click", function (event) {
+      getTextSearch.classList.add("is-show");
+    });
+  });
+});
+getInputSearch.addEventListener("input", searchKey);
+const arraySearchItem = [
+  ...document.querySelectorAll(".header__nav-textSearch__item a"),
+];
+
+function searchKey(e) {
+  let fitter = e.target.value;
+  fitter = fitter.toLowerCase();
+  arraySearchItem.forEach(function (item) {
+    const text = item.textContent;
+    const index = text.toLowerCase().indexOf(fitter);
+    if (index >= 0 && text.toLowerCase().startsWith(fitter.charAt(0))) {
+      item.innerHTML = `${text.substring(
+        0,
+        index
+      )}<span class ="color-primary">${text.substring(
+        index,
+        index + fitter.length
+      )}</span>${text.substring(index + fitter.length)}`;
+    }
+  });
+}
