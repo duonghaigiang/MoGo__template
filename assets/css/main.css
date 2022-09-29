@@ -18,6 +18,16 @@
   /* background-attachment: fixed; */
   object-position: top;
 }
+.header__process {
+  position: fixed;
+  width: 0;
+  left: 0;
+  top: 0;
+  height: 3px;
+  z-index: 1000;
+  background-color: var(--primary-color);
+  transition: all 0.2s linear;
+}
 .header__nav {
   display: flex;
   justify-content: space-between;
