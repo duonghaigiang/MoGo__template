@@ -39,3 +39,36 @@ arrayMeet.forEach(function (item) {
     });
   });
 });
+const nowDate = new Date();
+const olddDate = new Date("Mon Aug 01 2022 01:49:40 GMT+0700 (Indochina Time)");
+const showDate = document.querySelector(".header__text-more");
+const getNowDate = nowDate.getTime();
+const getOldDate = olddDate.getTime();
+let handelDate = (getNowDate - getOldDate) / 1000;
+let getYear = parseInt(handelDate / (60 * 60 * 24 * 30 * 12));
+getYear = `0${getYear}`.slice(-2);
+handelDate = handelDate % (60 * 60 * 24 * 30 * 12);
+let getMonth = parseInt(handelDate / (60 * 60 * 24 * 30));
+getMonth = `0${getMonth}`.slice(-2);
+handelDate = handelDate % (60 * 60 * 24 * 30);
+let getDay = parseInt(handelDate / (60 * 60 * 24));
+getDay = `0${getDay}`.slice(-2);
+function addDate() {
+  const temp = `<div class="header__date">
+  <div class="header__dateYear"><span>${getYear}</span> Years</div>
+  <div class="header__dateMonth"><span>${getMonth}</span> Months</div>
+  <div class="header__dateDate"><span>${getDay}</span> Days</div>
+</div>`;
+  showDate.insertAdjacentHTML("beforeend", temp);
+}
+showDate.addEventListener("click", function (e) {
+  e.preventDefault();
+  const containerDate = document.querySelector(".header__date");
+  if (!containerDate) {
+    addDate();
+  } else {
+    e.target.nextElementSibling.parentNode.removeChild(
+      e.target.nextElementSibling
+    );
+  }
+});
